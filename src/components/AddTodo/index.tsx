@@ -25,7 +25,7 @@ const AddTodo = () => {
           onClick={expand}
           rows={isExpanded ? 3 : 1}
         />
-        <button className="absolute bg-gray-300 bottom-0 right-0 p-3 w-30 h-30 rounded-full">
+        <button className="absolute bg-gray-300 bottom-0 right-0 p-3 w-30 h-30 rounded-full hover:bg-gray-400">
             <MdAdd />
         </button>
       </form>
