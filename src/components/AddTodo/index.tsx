@@ -9,11 +9,11 @@ const AddTodo = () => {
   };
 
   return (
-    <div className="container p-4 sm:p-0 w-full mx-auto mt-4">
+    <div className="container p-4 sm:p-0 w-full md:max-w-md mx-auto mt-4">
       <form className="relative">
         {isExpanded && (
           <input
-            className="w-full border-0 p-4 outline-none transition-all ease-in delay-300"
+            className="w-full border-0 p-4 text-lg outline-none transition-all ease-in delay-300 font-bold"
             type="text"
             placeholder="Title"
           />
@@ -25,7 +25,7 @@ const AddTodo = () => {
           onClick={expand}
           rows={isExpanded ? 3 : 1}
         />
-        <button className="absolute bg-gray-300 bottom-0 right-0 p-3 w-30 h-30 rounded-full hover:bg-gray-400">
+        <button className="absolute bg-gray-300 -bottom-5 -right-3 p-3 w-30 h-30 rounded-full hover:bg-gray-400">
             <MdAdd />
         </button>
       </form>
