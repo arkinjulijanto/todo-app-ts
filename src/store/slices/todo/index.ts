@@ -3,6 +3,7 @@ import { InitialState } from "./index.types";
 
 const initialState: InitialState = {
     todos: [],
+    _todos: [],
     todo: null,
 }
 

@@ -4,5 +4,6 @@ export interface Todo {
 }
 export interface InitialState {
     todos: [];
+    _todos: [];
     todo: Todo | null;
 }
