@@ -5,11 +5,11 @@ import { deleteTodo } from "../../store/slices/todo";
 import { IProps } from "./index.types";
 
 const TodoCard: React.FC<IProps> = (props) => {
-  const { item, index } = props;
+  const { item } = props;
   const dispatch = useAppDispatch();
 
   const handleDeleteClick = () => {
-    dispatch(deleteTodo(index));
+    dispatch(deleteTodo(item.id));
   };
 
   return (
