@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <AddTodo />
       <div className="container mt-8 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-        {todos.map((x: Todo) => {
-          return <TodoCard item={x} />;
+        {todos.map((x: Todo, i: number) => {
+          return <TodoCard item={x} index={i} />;
         })}
       </div>
     </div>
