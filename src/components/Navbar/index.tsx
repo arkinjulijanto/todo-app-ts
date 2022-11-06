@@ -1,7 +1,14 @@
 import * as React from "react";
+import { useAppDispatch } from "../../store/hooks";
+import { searchTodo } from "../../store/slices/todo";
 
-const Navbar = () => (
-  <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded shadow-lg shadow-zinc-200">
+const Navbar = () => {
+  const dispatch = useAppDispatch();
+
+  const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(searchTodo(e.target.value));
+  };
+  return <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded shadow-lg shadow-zinc-200">
     <div className="container flex flex-wrap justify-between items-center mx-auto">
       <a href="https://flowbite.com/" className="flex items-center">
         <p className="text-3xl font-bold">Remind!</p>
@@ -51,6 +58,7 @@ const Navbar = () => (
             id="search-navbar"
             className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 "
             placeholder="Search..."
+            onChange={handleValueChange}
           />
         </div>
         <button
@@ -106,6 +114,6 @@ const Navbar = () => (
       </div>
     </div>
   </nav>
-);
+};
 
 export default Navbar;

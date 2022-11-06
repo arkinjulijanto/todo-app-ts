@@ -11,6 +11,7 @@ const TodoCard: React.FC<IProps> = (props) => {
   const handleDeleteClick = () => {
     dispatch(deleteTodo(index));
   };
+
   return (
     <div className="relative p-4 bg-white rounded-lg border">
       <p className="text-xl font-bold text-clip">{item.title}</p>
