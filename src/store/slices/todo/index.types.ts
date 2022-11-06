@@ -3,7 +3,7 @@ export interface Todo {
     description: string;
 }
 export interface InitialState {
-    todos: [];
-    _todos: [];
+    _todos: Todo[];
+    todos: Todo[];
     todo: Todo | null;
 }
